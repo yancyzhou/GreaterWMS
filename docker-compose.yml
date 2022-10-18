@@ -2,26 +2,26 @@ version: '3.9'
 networks:
   basic:
 services:
-  front:
-#    build:
-#      context: ./
-#      dockerfile: ./docker/front/Dockerfile
-    container_name: greaterwms_front
-    image: greaterwms/greatermws_front:latest
-    restart: always
-    ports:
-      - '8080:8080'
-    volumes:
-      - ./templates:/GreaterWMS/templates:rw
-      - ./web_start.sh:/GreaterWMS/templates/webstart.sh
-    command:
-      - /bin/bash
-      - -c
-      #- "yarn install --force"
-      - |
-        bash /GreaterWMS/templates/webstart.sh
-    networks:
-      - basic
+#   front:
+# #    build:
+# #      context: ./
+# #      dockerfile: ./docker/front/Dockerfile
+#     container_name: greaterwms_front
+#     image: greaterwms/greatermws_front:latest
+#     restart: always
+#     ports:
+#       - '8080:8080'
+#     volumes:
+#       - ./templates:/GreaterWMS/templates:rw
+#       - ./web_start.sh:/GreaterWMS/templates/webstart.sh
+#     command:
+#       - /bin/bash
+#       - -c
+#       #- "yarn install --force"
+#       - |
+#         bash /GreaterWMS/templates/webstart.sh
+#     networks:
+#       - basic
   backend:
 #    build:
 #      context: ./

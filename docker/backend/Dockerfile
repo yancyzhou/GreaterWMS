@@ -1,5 +1,5 @@
 FROM python:3.9-slim as base
-RUN mkdir -p /GreaterWMS/templates
+#RUN mkdir -p /GreaterWMS/templates
 #copy requirements.txt
 ADD ./requirements.txt /GreaterWMS/requirements.txt 
 #Configure working directory

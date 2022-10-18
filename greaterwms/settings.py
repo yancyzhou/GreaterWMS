@@ -105,9 +105,17 @@ WSGI_APPLICATION = 'greaterwms.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 # update
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'wms',
+        'USER': 'wms',
+        'PASSWORD': 'wms@2022',
+        'HOST': 'pgm-uf65y1z323o31i5k5o.pg.rds.aliyuncs.com',
+        'PORT': '5432',
     }
 }
 
